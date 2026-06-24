@@ -1,5 +1,5 @@
 const CONFIG = {
-  CHANNEL_ID: 'PASTE_CHANNEL_ID_HERE',
+  CHANNEL_ID: 'UCr8WLAYrP78cqvCtmGXOKTA',
   RSS2JSON_KEY: '',
   CATEGORIES: [
     { id: 'all', label: 'All Videos' },
