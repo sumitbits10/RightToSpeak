@@ -1,6 +1,6 @@
 const BLOG_CONFIG = {
-  GITHUB_USER: 'PASTE_GITHUB_USERNAME',
-  GITHUB_REPO: 'PASTE_REPO_NAME',
+  GITHUB_USER: 'sumitbits10',
+  GITHUB_REPO: 'RightToSpeak',
   POSTS_FOLDER: 'posts',
 };
 
