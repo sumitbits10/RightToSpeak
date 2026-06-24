@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Adv. Akant Goswami | Right To Speak</title>
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .about-page { max-width: 1200px; margin: 0 auto; padding: 80px 2rem; display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; align-items: start; }
+    .about-sidebar { position: sticky; top: 90px; }
+    .profile-card { background: var(--navy); border-radius: 16px; padding: 2.5rem 2rem; text-align: center; color: var(--white); }
+    .profile-initials { width: 100px; height: 100px; background: rgba(201,162,39,0.2); border: 3px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 36px; font-weight: 800; color: var(--gold); margin: 0 auto 1.25rem; }
+    .profile-card h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 4px; }
+    .profile-card .role { color: var(--gold); font-size: 13px; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 1.5rem; }
+    .profile-links { display: flex; flex-direction: column; gap: 10px; }
+    .profile-link { display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 10px 14px; color: rgba(255,255,255,0.85); font-size: 13px; transition: border-color 0.2s; }
+    .profile-link:hover { border-color: var(--gold); color: var(--gold); }
+    .profile-link svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
+
+    .about-body h2 { font-size: 1.9rem; font-weight: 800; color: var(--navy); margin-bottom: 1rem; }
+    .about-body p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 1.25rem; line-height: 1.8; }
+    .about-body h3 { font-size: 1.2rem; font-weight: 700; color: var(--navy); margin: 2rem 0 1rem; padding-bottom: 8px; border-bottom: 2px solid var(--gold); display: inline-block; }
+
+    .practice-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+    .practice-item { background: var(--off-white); border-radius: 10px; padding: 1.25rem; border-left: 4px solid var(--navy); }
+    .practice-item h4 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+    .practice-item p { font-size: 13px; color: var(--text-muted); margin: 0; }
+
+    .mission-box { background: var(--navy); color: var(--white); border-radius: 16px; padding: 2.5rem; margin: 2rem 0; }
+    .mission-box h3 { color: var(--gold); border-bottom-color: var(--gold); margin-top: 0; }
+    .mission-box p { color: rgba(255,255,255,0.8); }
+
+    @media (max-width: 768px) {
+      .about-page { grid-template-columns: 1fr; }
+      .about-sidebar { position: static; }
+      .practice-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.png" alt="Right To Speak Logo" onerror="this.style.display='none'">
+        <div class="nav-logo-text">
+          <span class="brand">Right To Speak</span>
+          <span class="tagline">Legal Awareness India</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html" class="nav-cta">Consult Now</a></li>
+      </ul>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <h1>About Adv. Akant Goswami</h1>
+    <p>Advocate, Legal Educator &amp; Founder of Right To Speak</p>
+  </div>
+
+  <div class="about-page">
+    <aside class="about-sidebar">
+      <div class="profile-card">
+        <div class="profile-initials">AG</div>
+        <h2>Adv. Akant Goswami</h2>
+        <div class="role">Advocate &amp; Legal Educator</div>
+        <div class="profile-links">
+          <a href="tel:+917903495974" class="profile-link">
+            <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            +91 79034 95974
+          </a>
+          <a href="mailto:akantgoswami@gmail.com" class="profile-link">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            akantgoswami@gmail.com
+          </a>
+          <a href="https://youtube.com/@righttospeak-m8m" target="_blank" class="profile-link">
+            <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
+            YouTube Channel
+          </a>
+          <a href="https://www.instagram.com/right_to_speak_india" target="_blank" class="profile-link">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            Instagram
+          </a>
+          <a href="contact.html" class="profile-link" style="background:var(--gold);color:var(--navy);border-color:var(--gold);font-weight:700;justify-content:center;">
+            Book Consultation
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="about-body">
+      <h2>Fighting for Legal Awareness Across India</h2>
+      <p>Advocate Akant Goswami is a practising lawyer based in Dhanbad, Jharkhand with a passion for making the Indian legal system understandable for every citizen — regardless of their education or economic background.</p>
+      <p>Growing up in Jharkhand, Akant witnessed how lack of legal awareness often left ordinary people vulnerable — unable to file a complaint, unaware of their rights, or easily exploited by those who knew the system. This experience became the driving force behind <strong>Right To Speak</strong>.</p>
+
+      <div class="mission-box">
+        <h3>Mission</h3>
+        <p>"Every Indian citizen deserves to know their rights. The law is written for everyone — but it only works if people understand it. Right To Speak exists to bridge that gap, one video at a time."</p>
+        <p style="margin:0;">— Adv. Akant Goswami</p>
+      </div>
+
+      <h3>Areas of Practice</h3>
+      <div class="practice-grid">
+        <div class="practice-item">
+          <h4>Criminal Law</h4>
+          <p>FIR, bail, NDPS, IPC sections, arrest rights and procedure</p>
+        </div>
+        <div class="practice-item">
+          <h4>Consumer Rights</h4>
+          <p>Consumer forum complaints, refunds, product liability, fraud</p>
+        </div>
+        <div class="practice-item">
+          <h4>Family Law</h4>
+          <p>Divorce, alimony, child custody, maintenance under Hindu &amp; Muslim law</p>
+        </div>
+        <div class="practice-item">
+          <h4>Property Law</h4>
+          <p>Land disputes, rent agreements, eviction, registry and ownership</p>
+        </div>
+        <div class="practice-item">
+          <h4>Constitutional Rights</h4>
+          <p>Fundamental rights, PIL, writ petitions, Right to Information</p>
+        </div>
+        <div class="practice-item">
+          <h4>Labour &amp; Employment</h4>
+          <p>Workplace rights, PF/ESI disputes, wrongful termination</p>
+        </div>
+      </div>
+
+      <h3>Why Right To Speak?</h3>
+      <p>Most legal content in India is either too technical, available only in English, or hidden behind paywalls. Akant creates videos in simple Hindi, covering real-life situations that affect common people — what to do if police refuse to file your FIR, how to approach consumer court, what rights you have as a tenant.</p>
+      <p>The platform has grown entirely organically through YouTube and Instagram, reaching thousands of viewers across Jharkhand and beyond.</p>
+
+      <div style="margin-top:2rem;">
+        <a href="videos.html" class="btn-primary" style="margin-right:1rem;">Watch Videos</a>
+        <a href="contact.html" class="btn-outline" style="border-color:var(--navy);color:var(--navy);padding:14px 32px;border-radius:8px;font-weight:600;font-size:15px;display:inline-flex;align-items:center;gap:8px;">Book Consultation</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 <strong>Right To Speak</strong> — Adv. Akant Goswami, Dhanbad, Jharkhand.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

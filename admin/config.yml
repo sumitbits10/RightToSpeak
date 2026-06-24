@@ -1,0 +1,31 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: assets/blog
+public_folder: /assets/blog
+
+publish_mode: editorial_workflow
+
+collections:
+  - name: posts
+    label: Blog Posts
+    folder: posts
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Publish Date, name: date, widget: datetime }
+      - label: Category
+        name: category
+        widget: select
+        options:
+          - Criminal Law
+          - Consumer Rights
+          - Family Law
+          - Property Law
+          - Constitutional Rights
+          - General Legal Tips
+      - { label: Featured Image, name: image, widget: image, required: false }
+      - { label: Summary, name: summary, widget: text, hint: "One or two lines shown on the blog listing page" }
+      - { label: Body, name: body, widget: markdown }

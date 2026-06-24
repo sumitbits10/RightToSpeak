@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Right To Speak | Adv. Akant Goswami</title>
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .contact-page { max-width: 1200px; margin: 0 auto; padding: 80px 2rem; display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; align-items: start; }
+
+    .info-card { background: var(--navy); border-radius: 16px; padding: 2.5rem; color: var(--white); margin-bottom: 1.5rem; }
+    .info-card h3 { color: var(--gold); font-size: 1.1rem; font-weight: 700; margin-bottom: 1.5rem; }
+    .info-rows { display: flex; flex-direction: column; gap: 1.25rem; }
+    .info-row { display: flex; align-items: flex-start; gap: 1rem; }
+    .info-row-icon { width: 42px; height: 42px; background: rgba(201,162,39,0.15); border: 1px solid rgba(201,162,39,0.3); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .info-row-icon svg { width: 18px; height: 18px; fill: var(--gold); }
+    .info-row-label { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 3px; }
+    .info-row-value { font-size: 15px; color: var(--white); font-weight: 500; }
+    .info-row-value a { color: var(--white); }
+    .info-row-value a:hover { color: var(--gold); }
+
+    .hours-card { background: var(--off-white); border-radius: 16px; padding: 2rem; border: 1px solid var(--border); }
+    .hours-card h3 { color: var(--navy); font-size: 1.1rem; font-weight: 700; margin-bottom: 1.25rem; }
+    .hours-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 14px; }
+    .hours-row:last-child { border-bottom: none; }
+    .hours-row .day { color: var(--text-muted); }
+    .hours-row .time { font-weight: 600; color: var(--navy); }
+    .hours-row .time.closed { color: #ef4444; }
+
+    .form-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 2.5rem; box-shadow: 0 4px 24px rgba(27,36,114,0.08); }
+    .form-card h2 { font-size: 1.6rem; font-weight: 800; color: var(--navy); margin-bottom: 0.5rem; }
+    .form-card p { color: var(--text-muted); margin-bottom: 2rem; font-size: 14px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-card .form-group label { color: var(--text-dark); }
+    .form-card .form-group input,
+    .form-card .form-group textarea,
+    .form-card .form-group select { background: var(--off-white); border: 1px solid var(--border); color: var(--text-dark); }
+    .form-card .form-group input::placeholder,
+    .form-card .form-group textarea::placeholder { color: var(--text-muted); }
+    .form-card .form-group input:focus,
+    .form-card .form-group textarea:focus,
+    .form-card .form-group select:focus { border-color: var(--navy); }
+    .form-card .form-group select option { background: var(--white); color: var(--text-dark); }
+    .form-card .form-group select { color: var(--text-dark); }
+    .form-card .btn-submit { background: var(--navy); width: 100%; }
+    .form-card .btn-submit:hover { background: var(--navy-light); }
+
+    .success-msg { display: none; background: #d1fae5; border: 1px solid #6ee7b7; border-radius: 8px; padding: 1rem 1.25rem; color: #065f46; font-size: 14px; font-weight: 600; margin-top: 1rem; }
+
+    @media (max-width: 768px) {
+      .contact-page { grid-template-columns: 1fr; padding: 60px 1.5rem; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.png" alt="Right To Speak Logo" onerror="this.style.display='none'">
+        <div class="nav-logo-text">
+          <span class="brand">Right To Speak</span>
+          <span class="tagline">Legal Awareness India</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active nav-cta">Consult Now</a></li>
+      </ul>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <h1>Contact &amp; Consultation</h1>
+    <p>Reach out to Adv. Akant Goswami for legal queries or a consultation</p>
+  </div>
+
+  <div class="contact-page">
+    <div>
+      <div class="info-card">
+        <h3>Contact Information</h3>
+        <div class="info-rows">
+          <div class="info-row">
+            <div class="info-row-icon">
+              <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            </div>
+            <div>
+              <div class="info-row-label">Phone</div>
+              <div class="info-row-value"><a href="tel:+917903495974">+91 79034 95974</a></div>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-row-icon">
+              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </div>
+            <div>
+              <div class="info-row-label">Email</div>
+              <div class="info-row-value"><a href="mailto:akantgoswami@gmail.com">akantgoswami@gmail.com</a></div>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-row-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <div>
+              <div class="info-row-label">Location</div>
+              <div class="info-row-value">Dhanbad, Jharkhand, India</div>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-row-icon">
+              <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
+            </div>
+            <div>
+              <div class="info-row-label">YouTube</div>
+              <div class="info-row-value"><a href="https://youtube.com/@righttospeak-m8m" target="_blank">@righttospeak-m8m</a></div>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-row-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </div>
+            <div>
+              <div class="info-row-label">Instagram</div>
+              <div class="info-row-value"><a href="https://www.instagram.com/right_to_speak_india" target="_blank">@right_to_speak_india</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hours-card">
+        <h3>Consultation Hours</h3>
+        <div class="hours-row"><span class="day">Monday – Friday</span><span class="time">10:00 AM – 6:00 PM</span></div>
+        <div class="hours-row"><span class="day">Saturday</span><span class="time">10:00 AM – 2:00 PM</span></div>
+        <div class="hours-row"><span class="day">Sunday</span><span class="time closed">Closed</span></div>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <h2>Send a Message</h2>
+      <p>Describe your legal concern and Adv. Akant Goswami will get back to you personally.</p>
+      <form id="contact-form" class="contact-form" style="gap:1rem;">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" placeholder="Your first name" required>
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" placeholder="Your last name">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="your@email.com">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="+91 XXXXX XXXXX" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="topic">Legal Topic</label>
+          <select id="topic" required>
+            <option value="">Select a topic</option>
+            <option>Criminal Law</option>
+            <option>Consumer Rights</option>
+            <option>Family Law (Divorce / Maintenance)</option>
+            <option>Property Dispute</option>
+            <option>Constitutional Rights / RTI</option>
+            <option>Labour &amp; Employment</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="city">Your City / District</label>
+          <input type="text" id="city" placeholder="E.g. Dhanbad, Ranchi, Bokaro...">
+        </div>
+        <div class="form-group">
+          <label for="message">Describe Your Issue</label>
+          <textarea id="message" rows="5" placeholder="Briefly explain your legal situation. The more detail you provide, the better Akant can help." required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Send Message</button>
+        <div class="success-msg" id="success-msg">
+          ✓ Your message has been sent! Adv. Akant Goswami will contact you shortly.
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 <strong>Right To Speak</strong> — Adv. Akant Goswami, Dhanbad, Jharkhand.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = this.querySelector('.btn-submit');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.textContent = 'Send Message';
+        btn.disabled = false;
+        this.reset();
+        const msg = document.getElementById('success-msg');
+        msg.style.display = 'block';
+        setTimeout(() => msg.style.display = 'none', 5000);
+      }, 1200);
+    });
+  </script>
+</body>
+</html>

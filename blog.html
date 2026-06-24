@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Right To Speak | Adv. Akant Goswami</title>
+  <meta name="description" content="Legal articles and awareness posts by Advocate Akant Goswami, Dhanbad.">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .blog-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: box-shadow 0.2s, transform 0.2s;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-card:hover {
+      box-shadow: var(--shadow);
+      transform: translateY(-3px);
+    }
+
+    .blog-card-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .blog-card-img-placeholder {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .blog-card-img-placeholder span {
+      color: rgba(255,255,255,0.15);
+      font-size: 64px;
+      font-weight: 800;
+      letter-spacing: -2px;
+    }
+
+    .blog-card-body {
+      padding: 1.25rem 1.4rem 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 0.75rem;
+    }
+
+    .blog-cat {
+      background: var(--navy);
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 12px;
+      letter-spacing: 0.3px;
+    }
+
+    .blog-date {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .blog-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.45;
+      margin-bottom: 0.6rem;
+    }
+
+    .blog-card p {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .blog-read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: 700;
+      margin-top: 1rem;
+      transition: gap 0.2s;
+    }
+
+    .blog-card:hover .blog-read-more { gap: 10px; }
+
+    .blog-empty {
+      grid-column: 1/-1;
+      text-align: center;
+      padding: 4rem 2rem;
+      color: var(--text-muted);
+    }
+
+    .blog-empty h3 { color: var(--navy); margin-bottom: 0.5rem; font-size: 1.2rem; }
+
+    .filter-bar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.png" alt="Right To Speak Logo" onerror="this.style.display='none'">
+        <div class="nav-logo-text">
+          <span class="brand">Right To Speak</span>
+          <span class="tagline">Legal Awareness India</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="nav-cta">Consult Now</a></li>
+      </ul>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <h1>Legal Blog</h1>
+    <p>Articles, awareness guides and legal tips by Adv. Akant Goswami</p>
+  </div>
+
+  <section>
+    <div class="section-inner">
+      <div class="filter-bar" id="filter-bar"></div>
+      <div class="blog-grid" id="blog-grid">
+        <div class="video-loading"><div class="spinner"></div><p>Loading posts...</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 <strong>Right To Speak</strong> — Adv. Akant Goswami, Dhanbad, Jharkhand.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/blog.js"></script>
+</body>
+</html>
