@@ -1,6 +1,5 @@
 const CONFIG = {
   CHANNEL_ID: 'UCr8WLAYrP78cqvCtmGXOKTA',
-  RSS2JSON_KEY: '',
   CATEGORIES: [
     { id: 'all', label: 'All Videos' },
     { id: 'criminal', label: 'Criminal Law', keywords: ['criminal', 'ipc', 'fir', 'arrest', 'bail', 'murder', 'theft'] },
@@ -35,22 +34,15 @@ function formatDate(dateStr) {
   return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
 }
 
-function getVideoId(url) {
-  const match = url.match(/[?&]v=([^&]+)/) || url.match(/youtu\.be\/([^?]+)/);
-  return match ? match[1] : null;
-}
-
 function renderVideoCard(video) {
-  const videoId = getVideoId(video.link);
-  const thumb = videoId
-    ? `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`
-    : 'assets/placeholder.jpg';
+  const videoId = video.videoId;
+  const thumb = `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
   const catId = categorizeVideo(video.title, video.description || '');
   const catLabel = getCategoryLabel(catId);
 
   return `
-    <div class="video-card" data-category="${catId}" data-videoid="${videoId}">
-      <div class="video-thumb" onclick="openVideo('${videoId}')">
+    <div class="video-card" data-category="${catId}">
+      <div class="video-thumb" id="thumb-${videoId}" onclick="embedVideo('${videoId}', this)">
         <img src="${thumb}" alt="${video.title}" loading="lazy">
         <div class="play-btn">
           <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -64,9 +56,16 @@ function renderVideoCard(video) {
     </div>`;
 }
 
-function openVideo(videoId) {
-  if (!videoId) return;
-  window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
+function embedVideo(videoId, thumbEl) {
+  const wrapper = thumbEl.closest('.video-thumb');
+  wrapper.innerHTML = `<iframe
+    src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+    style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:0;">
+  </iframe>`;
+  wrapper.style.cursor = 'default';
 }
 
 function filterAndRender() {
@@ -79,11 +78,9 @@ function filterAndRender() {
 
   const visible = filtered.slice(0, displayCount);
 
-  if (visible.length === 0) {
-    grid.innerHTML = '<div class="video-loading"><p>No videos found in this category.</p></div>';
-  } else {
-    grid.innerHTML = visible.map(renderVideoCard).join('');
-  }
+  grid.innerHTML = visible.length
+    ? visible.map(renderVideoCard).join('')
+    : '<div class="video-loading"><p>No videos found in this category.</p></div>';
 
   const loadMoreBtn = document.getElementById('load-more');
   if (loadMoreBtn) {
@@ -95,28 +92,23 @@ async function fetchVideos() {
   const grid = document.getElementById('video-grid');
   if (!grid) return;
 
-  if (!CONFIG.CHANNEL_ID || CONFIG.CHANNEL_ID === 'PASTE_CHANNEL_ID_HERE') {
-    grid.innerHTML = `
-      <div class="video-loading">
-        <p style="color:#C9A227;font-weight:600;">YouTube Channel ID not configured yet.</p>
-        <p style="margin-top:8px;font-size:13px;">Edit <code>js/main.js</code> and set your Channel ID.</p>
-      </div>`;
-    return;
-  }
-
   grid.innerHTML = '<div class="video-loading"><div class="spinner"></div><p>Loading videos...</p></div>';
 
-  const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${CONFIG.CHANNEL_ID}`;
-  const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}&count=50`;
-
   try {
-    const res = await fetch(apiUrl);
-    const data = await res.json();
+    const res = await fetch('/.netlify/functions/videos');
+    if (!res.ok) throw new Error('Function error');
+    const entries = await res.json();
 
-    if (data.status !== 'ok') throw new Error('Feed error');
+    allVideos = entries.map(v => ({
+      videoId: v.videoId,
+      title: v.title,
+      pubDate: v.published,
+      description: v.description,
+    }));
 
-    allVideos = data.items || [];
+    if (allVideos.length === 0) throw new Error('No videos');
     filterAndRender();
+
   } catch (e) {
     grid.innerHTML = `
       <div class="video-loading">
