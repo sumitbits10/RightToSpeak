@@ -2,7 +2,8 @@
 title: "DIVORCE RELATED LAW "
 date: 2026-07-04T16:40:00.000+05:30
 category: Family Law
-summary: >+
+image: https://in.images.search.yahoo.com/search/images?p=divorce+photos+not+copyrighted&fr=mcafee&type=E210IN826G0&imgurl=https%3A%2F%2Fegyptianstreets.com%2Fwp-content%2Fuploads%2F2023%2F08%2Fhowmanymarriagesendindivorce.jpeg#id=5&iurl=https%3A%2F%2Fegyptianstreets.com%2Fwp-content%2Fuploads%2F2023%2F08%2Fhowmanymarriagesendindivorce.jpeg&action=click
+summary: >
   Divorce in India
 
 
