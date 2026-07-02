@@ -2,6 +2,7 @@
 title: Consumer Court Mein Complaint Kaise Karein — Step by Step Guide
 date: 2026-06-24T15:27:00.000+05:30
 category: Consumer Rights
+image: https://cache.careers360.mobi/media/article_images/2024/7/24/Consumer-courts-of-india.jpg
 summary: Consumer Court Mein Complaint Kaise Karein
 ---
 Aaj ke zamane mein online shopping aur local markets mein cheating aam baat ho gayi hai. Lekin bahut kam log jaante hain ki unke paas ek bahut bada hathiyaar hai — Consumer Protection Act 2019.
